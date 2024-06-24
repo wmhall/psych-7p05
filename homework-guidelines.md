@@ -28,7 +28,7 @@ Your homework submission will not be considered complete until you have posted y
 
 ### Make your work shine!
 
-Here are some minor tweaks that can make a big difference in how awesome your product is.
+Here are some minor tweaks that can make a big difference:
 
 #### Make it easy for people to access your work
 

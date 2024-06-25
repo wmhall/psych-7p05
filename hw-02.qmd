@@ -58,7 +58,7 @@ Notice which figures are easy/hard to make, which data formats make better input
 
 **Plot stretch goal:** Make your assignment pop with a nice color palette. Explore the palettes [viridis](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html), [ghibli](https://github.com/ewenme/ghibli), [wesanderson](https://github.com/karthik/wesanderson), or another of you choosing. Get them working in your plots.
 
-**Table stretch goal:** Explore some really nice fancy table helper packages. For example, try working with the [gt](https://gt.rstudio.com/) package. For some table inspiration, take a look at the winners of Rstudio's recent [table competition](https://blog.rstudio.com/2020/12/23/winners-of-the-2020-rstudio-table-contest/).
+**Table stretch goal:** Explore some really nice fancy table helper packages. For example, try working with the [gt](https://gt.rstudio.com/) package. For some table inspiration, take a look at the winners of Rstudio's [table competition](https://posit.co/blog/winners-of-the-2022-table-contest/).
 
 ### Report your process
 

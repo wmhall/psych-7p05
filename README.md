@@ -30,15 +30,15 @@ This repo contains the labs and homework for PSYC-7P05.
 
 [General rubric](general-rubric.md)
 
-[Homework 1](hw01.md)
+[Homework 1](hw-01.md)
 
-[Homework 2](hw02.md)
+[Homework 2](hw-02.md)
 
-[Homework 3](hw03.md)
+[Homework 3](hw-03.md)
 
-[Homework 4](hw04.md)
+[Homework 4](hw-04.md)
 
-[Homework 5](hw05.md)
+[Homework 5](hw-05.md)
 
 ## Peer review
 

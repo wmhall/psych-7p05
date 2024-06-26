@@ -1,5 +1,5 @@
 # Final project
-Will Hall
+
 
 For your final project, you will create a tutorial about how to do
 something in R. The final project gives you a chance to pursue any topic

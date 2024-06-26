@@ -1,6 +1,5 @@
 ---
 title: "Final project"
-author: "Will Hall"
 format: gfm
 ---
 

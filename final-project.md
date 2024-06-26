@@ -152,6 +152,8 @@ write about R code. Here are a few good R blogs:
 
 - [Alex Cookson](https://www.alexcookson.com/)
 
+- [Citizen Statistician](citizen-statistician.org)
+
 #### Watch R presentations
 
 Watching how other people teach R might provide you with some

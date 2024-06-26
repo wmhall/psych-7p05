@@ -91,6 +91,8 @@ Blog posts are another way that people in the R community share tutorials. Readi
 
 -   [Alex Cookson](https://www.alexcookson.com/)
 
+-   [Citizen Statistician](citizen-statistician.org)
+
 #### Watch R presentations
 
 Watching how other people teach R might provide you with some tips/tricks for your presentation. Below I've provided some links to recorded talks that might be helpful to look at:

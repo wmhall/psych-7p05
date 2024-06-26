@@ -26,8 +26,8 @@ and work with large data sets.
 You might also consider doing some live coding where you share your
 screen and demonstrate your chosen package using RStudio.
 
-*Note: if you’d like your classmates to code along with you, please post
-a message to the Teams site at least a few days before your presentation
+*Note: if you’d like your classmates to code along with you, please let
+the class know ahead of time so we can send out an announcement
 describing how to install the package you’ll be covering.*
 
 ### Write up
@@ -117,8 +117,8 @@ walk the reader through them.
 
 Remember to show us the skills you’ve picked up in the course. Use the
 `tidyverse` to your advantage. It should be your main data wrangle/viz
-tool. You should also make your `Rmarkdown` shine. I’ve already seen a
-lot of great looking `Rmarkdown`, so bring that into your final project
+tool. You should also make your Quarto shine. Bring the Quarto skills
+you’ve picked up from completing the homework into your final project
 write-up.
 
 #### Read vignettes

@@ -102,6 +102,19 @@ You should provide links to resources where people can learn more.
 
 Finally, provide links to resources you used to develop your tutorial.
 
+### Submitting your write up
+
+Like your homework assignments, you will author your write up in
+[Quarto](https://quarto.org/). Please render your Quarto documents to
+HTML. Your write up should be submitted in the Assignments section of
+BrightSpace.
+
+Which files to submit:
+
+- A zip file of everything in your project folder.
+- But you should make it easy for your TA to know which files to focus
+  on
+
 ### Other advice
 
 #### Pick a manageable scope

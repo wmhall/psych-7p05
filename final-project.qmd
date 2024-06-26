@@ -2,7 +2,7 @@
 title: "Final project"
 author: "Will Hall"
 date: "01/03/2021"
-output: github_document
+format: gfm
 ---
 
 ```{r}

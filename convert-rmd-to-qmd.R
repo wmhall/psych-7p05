@@ -1,3 +1,3 @@
-knitr::convert_chunk_header("hw02.Rmd", 
-														output = "hw-02.qmd", 
+knitr::convert_chunk_header("final-project.Rmd", 
+														output = "final-project.qmd", 
 														type = "yaml")

@@ -130,10 +130,18 @@ Shift + M (Windows), Cmd + Shift + M (Mac).
 Let’s demo then I’ll explain:
 
 ``` r
-gapminder |> head
+gapminder |> head()
 ```
 
-    Error: The pipe operator requires a function call as RHS (<text>:1:14)
+    # A tibble: 6 × 6
+      country     continent  year lifeExp      pop gdpPercap
+      <fct>       <fct>     <int>   <dbl>    <int>     <dbl>
+    1 Afghanistan Asia       1952    28.8  8425333      779.
+    2 Afghanistan Asia       1957    30.3  9240934      821.
+    3 Afghanistan Asia       1962    32.0 10267083      853.
+    4 Afghanistan Asia       1967    34.0 11537966      836.
+    5 Afghanistan Asia       1972    36.1 13079460      740.
+    6 Afghanistan Asia       1977    38.4 14880372      786.
 
 This is equivalent to `head(gapminder)`. This pipe operator takes the
 thing on the left-hand-side and **pipes** it into the function call on

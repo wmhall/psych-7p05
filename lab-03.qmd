@@ -64,7 +64,7 @@ Here's what it looks like: `|>`. The RStudio keyboard shortcut: Ctrl + Shift + M
 Let's demo then I'll explain:
 
 ```{r}
-gapminder |> head
+gapminder |> head()
 ```
 
 This is equivalent to `head(gapminder)`. This pipe operator takes the thing on the left-hand-side and **pipes** it into the function call on the right-hand-side -- literally, drops it in as the first argument.

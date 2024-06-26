@@ -1,7 +1,6 @@
 ---
 title: "Final project"
 author: "Will Hall"
-date: "01/03/2021"
 format: gfm
 ---
 

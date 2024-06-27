@@ -85,7 +85,8 @@ tibble::tribble(
 
 gt(overall_scores, rowname_col = "topic") |> 
 	rows_add(topic = "Total", 
-					 points = sum(overall_scores$points))
+					 points = sum(overall_scores$points)) |> 
+	as_raw_html()
 ```
 
 ## Detailed rubric

@@ -25,8 +25,7 @@ get_rubric <- function(rubric_table, rubric_text) {
 	pivot_wider(names_from = points, 
 							values_from = text) |> 
 	select(!rubric) |> 
-	gt() |> 
-	as_raw_html()
+	gt()
 }
 
 
@@ -55,7 +54,8 @@ pres_rubric |>
 	pivot_wider(names_from = points, 
 							values_from = text) |> 
 	select(!rubric) |> 
-	gt()
+	gt() |> 
+	as_raw_html()
 
 
 ```

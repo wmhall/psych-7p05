@@ -46,7 +46,7 @@ This repo contains the labs and homework for PSYC-7P05.
 
 ## Final project
 
-[Final project](final-project.md)
+[Final project guidelines](final-project.md)
 
 [Final project rubric](final-project-rubric.md)
 

@@ -32,12 +32,6 @@ get_rubric <- function(rubric_table, rubric_text) {
 
 ```
 
-
-```{r}
-gt(mtcars)
-```
-
-
 This document provides the rubric used to score the final project. 
 
 # Presentation

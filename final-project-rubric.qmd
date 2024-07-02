@@ -94,7 +94,7 @@ get_rubric(writeup_rubric, "Introduction")
 
 ```
 
-### **Code walk-through (9 points)**
+### Code walk-through (9 points)
 
 ```{r}
 #| echo: false

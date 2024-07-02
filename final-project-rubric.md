@@ -10,7 +10,7 @@ This document provides the rubric used to score the final project.
 
 The presentation is scored out of 15 points using the rubric below:
 
-<div id="uxpxhpzpbe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="rzouawijak" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  
 
 | topic                                        | 0 points                                                                                               | 1 point                                                                                                                                                        | 2 points                                                                                                                                                                                                                                                               | 3 points                                                                                                                                                                                                                                   |
@@ -29,7 +29,7 @@ The presentation is scored out of 15 points using the rubric below:
 
 The write-up is scored out of 25 points:
 
-<div id="pybmmlstzr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="wddouumpse" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  
 
 |                             | points |
@@ -51,7 +51,7 @@ write-up.
 
 ### Introduction (3 points)
 
-<div id="xhxvwqmefq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="uklmebvwgf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  
 
 | topic        | 0 points                                       | 1 point                                                                  | 2 points                                                                  | 3 points                                                                              |
@@ -60,9 +60,9 @@ write-up.
 
 </div>
 
-### **Code walk-through (9 points)**
+### Code walk-through (9 points)
 
-<div id="rftuorfjpa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="dsqhsuzjcy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  
 
 | topic           | 1 point                                                                                                        | 2 points                                                                                      | 3 points                                                                                                             |
@@ -75,7 +75,7 @@ write-up.
 
 ### Conclusions (3 points)
 
-<div id="ffhylaazzo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="vsrrlhkfdc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  
 
 | topic       | 0 points                                                        | 1 point                                                              | 2 points                                              | 3 points                                                                                                                |
@@ -86,7 +86,7 @@ write-up.
 
 ### Resources for learning more (1 point)
 
-<div id="jmmkqnaxem" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="mishpfnzla" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  
 
 | topic                       | 0 points                      | 0.5 points | 1 point |
@@ -102,7 +102,7 @@ about their chosen topic.
 
 ### Resources you found helpful (1 point)
 
-<div id="zmhrqfkcow" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="sznforrjpd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  
 
 | topic                       | 0 points                      | 0.5 points | 1 point |
@@ -118,7 +118,7 @@ about their chosen topic.
 
 ### Overall style (8 points)
 
-<div id="utmbftmzia" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="iypaqpksur" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  
 
 | topic                                        | 0 points                                                                      | 1 point                                                                                                                              | 2 points                                                                                                                                                                                   | 3 points                                                                                                                                                                    |
@@ -127,7 +127,7 @@ about their chosen topic.
 | Communication                                | No evidence of efforts to organize and effectively communicate chosen topic.  | The write-up had several organizational issues; It was difficult to understand; Supporting code/table/figures were not well prepared | The write-up is for the most part clearly and logically organized (intro, body, conclusion); Supporting code/table/figures were well prepared but could have been clearer in a few places. | The write-up had a clear and logical organization (intro, body, conclusion); Supporting code/table/figures were well prepared, informative, effective, and not distracting. |
 
 </div>
-<div id="xurlamzlui" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="srioyvsnou" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  
 
 | topic          | 0 points                                                                                      | 1 point      | 2 points                               |

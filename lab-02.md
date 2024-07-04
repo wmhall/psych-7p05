@@ -106,8 +106,8 @@ I’ll ask a few of you to share your work at the end of the lab session.
 
 ## But I want to do more!
 
-If you finish up everything above, you can start working on [homework
-1](hw01.md).
+If you finish up everything above, you can start working on [Homework
+1](hw-01.md).
 
 ## Tips and tricks
 

@@ -14,7 +14,7 @@ type `?relig_income`.
 ``` r
 library(tidyverse)
 
-relig_income  |>  
+relig_income |>  
   head(10)
 ```
 

@@ -345,7 +345,7 @@ my_data_frame[my_data_frame$z, ]
 A data type that we didn't cover is matrices because I think you'll find that you rarely use them. However, if you want to learn about matrices, you can do so by reading these resources:  [See section 4.9 of this chapter](https://bookdown.org/rdpeng/rprogdatascience/r-nuts-and-bolts.html) and [Section 9.2 of this chapter](https://bookdown.org/rdpeng/rprogdatascience/subsetting-r-objects.html). When learning about matrices, think about how they relate to vectors and data frames. 
 
 
-Continue working on [Homework 3](hw03.md).
+Continue working on [Homework 3](hw-03.md).
 
 
 

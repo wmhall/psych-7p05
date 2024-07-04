@@ -21,7 +21,7 @@ To learn about these tools, you will work on a common data wrangling task: recod
 When working with data from psychology studies, you might find yourself faced with a dataset that looks a little like the one printed below. You have 15 participants who have answered a question using a 1-5 scale ranging from Strongly Disagree to Strongly Agree.
 
 ```{r}
-#| echo: !expr F
+#| echo: false
 data_df <- 
 	tibble(ps_id = 1:15, 
 					q1 = sample(c("Strongly Agree", 

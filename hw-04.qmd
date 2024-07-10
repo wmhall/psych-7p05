@@ -1,0 +1,76 @@
+---
+title: "Homework 04"
+format: gfm
+---
+
+### Overview
+
+The goal of this homework is to perform a complete data wrangling workflow using data from a survey about people's favorite Halloween candy conducted by Benjamin Cohen and David Ng.
+
+Benjamin Cohen and David Ng have been conducting a Halloween candy survey for a couple of years and writing it up:
+
+-   [2017 Candy Ranking](https://boingboing.net/2017/10/30/the-2017-halloween-candy-hiera.html)
+
+-   [2016 Candy Ranking](https://boingboing.net/2016/10/31/the-candy-hierarchy-for-2016.html)
+
+-   [2015 Candy Ranking](https://boingboing.net/2015/10/31/the-candy-hierarchy-2015-your.html)
+
+-   [2014 Candy Ranking](https://boingboing.net/2014/10/31/the-candy-hierarchy-2014.html)
+
+-   [2013 Candy Ranking](https://boingboing.net/2013/10/30/the-candy-hierarchy-2013.html)
+
+-   [2012 Candy Ranking](https://boingboing.net/2012/10/29/the-candy-hierarchy-2012.html)
+
+-   [2011 Candy Ranking](https://boingboing.net/2010/10/22/the-candy-hierarchy.html)
+
+For this homework, you are going to use the [2017 Candy Survey Data](https://www.scq.ubc.ca/so-much-candy-data-seriously/)
+
+It is vital that you finish some task, nachos to cheesecake. We want a bit of story, some tables, some figures. Keep scaling back the cleaning and reshaping until you can manage this. Then scale up until you run out of time or patience.
+
+### Your mission
+
+Bring the [2017 Candy Survey data](https://www.scq.ubc.ca/so-much-candy-data-seriously/) – or part of it – to a ready-to-analyze state and complete some exploratory / analytical task.
+
+Some example tasks:
+
+-   Easy: Examining how joy/despair scores change with age
+
+-   Medium: Comparing the joy/despair values of different types of candy (Chocolate vs. “true candy” like Nerds/Starburst)
+
+-   Medium: Looking for predictors of candy preference (i.e. in the non-candy fields, or perhaps looking at correlations between candy preferences).
+
+-   Hard: Looking for ‘structure’ in the data. For example, are there classes of individuals with similar candy preference profiles?
+
+### Sections of the Assignment
+
+#### Examining the raw data and choosing a task
+
+Familiarize yourself with the raw data if you haven’t already. Based on the information available, formulate a task you want to complete and explain what it is. Make it fairly specific, like the tasks above.
+
+#### Wrangling Based on the task you chose
+
+Get the data in a workable format. This will likely involve all kinds of fun dropping columns, using functions to clean text and headers, some tidyr for pivoting, etc. Divide each step by a unique heading in your document. By the end, you will likely want things in tidy data format so you can easily use dplyr/ggplot for your analysis/exploration.
+
+#### Exploring/Analyzing
+
+Now that your data us ready to analyze, complete the task you set out to complete! This will also be multipart, so again divide things up logically. Perhaps you will start with some basic exploration + tables to get a sense of the data, and then move onto dplyr and plotting.
+
+#### But I Want to Do More!
+
+Taking a sufficiently difficult/ambitious task to completion would certainly qualify you for a check plus, but here are some other ideas:
+
+-   Do some longitudinal analyses by pairing data from [previous years](https://www.scq.ubc.ca/so-much-candy-data-seriously/) (2016, 2015, and 2014) with the 2017 data set.
+
+### A Word of Warning
+
+The Candy Data sets are in a raw format. The data comes straight from people on the internet completing an anonymous survey. As I'm sure you can imagine, this means that the datasets may contain offensive and downright terrifying responses. I'm sure you have all had experiences with horrible things being shared online, but if you want to limit your exposure in this data, I would avoid looking too closely at the openended text responses.
+
+### Rubric
+
+As always, refer to the [general rubric](general-rubric.md) for guidelines on how we'll be grading.
+
+Check minus: Student did not sufficiently complete any of the above sections, or performed a trivially simple task. Weak application of wrangling skills learned in class. Student missed clear opportunities to complement numbers with a figure. Technical problem(s) that are relatively easy to fix. It's hard to find the report in your Rproject folder.
+
+Check: Hits all the elements. You chose a reasonable task, wrangling the data, and completed the task. No obvious mistakes. Pleasant to read. No heroic detective work required. Solid.
+
+Check plus: Exceeded the requirements in number of dimensions. Chose an ambitious/difficult task and pulled it off. Impressive use of `dplyr`, `tidyr`, `broom`, `ggplot2`, etc. Impeccable organization of your report. We learned something new from reviewing your work and are eager to incorporate it into our own work.

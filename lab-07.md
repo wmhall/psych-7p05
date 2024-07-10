@@ -1,0 +1,69 @@
+# Lab 07
+
+
+### Fit a linear model
+
+Using the `gapminder` dataset, fit a linear model (`lm`) in which you
+predict `lifeExp` from `year`.
+
+Once you’ve fit your model, explore the various tidiers from the `broom`
+package. You should be able to explain how `tidy()`, `glance()`, and
+`augment()` differ from one another in the types of things they tell you
+about your model.
+
+### Fit models to subsets of the data
+
+| group_a                  | group_b   |
+|:-------------------------|:----------|
+| Iraq                     | Morocco   |
+| Zambia                   | Indonesia |
+| Namibia                  | Sweden    |
+| Zimbabwe                 | Ecuador   |
+| Central African Republic | Brazil    |
+
+Pick two countries from `group_a` and two from `group_b`, and for each
+country, fit a linear model predicting `lifeExp` from `year`.
+
+Tidy the model outputs using functions from `broom`. Use your `dplyr`
+skills to sort through the parameter estimates. `filter()` and
+`arrange()` will be helpful here. You should be able to do things like
+arrange the countries by p-value.
+
+Can you create a useful plot of the parameter estimates from the
+different countries?
+
+### Explore the models
+
+#### Find poorly fitting models
+
+For the four countries that you selected, identify poorly fitting models
+by looking at the various fit statistics you can extract with the
+`broom` package.
+
+Visualize the data associated with the four countries you selected so
+that you can see when a linear model might not be appropriate.
+
+Here is an idea of how you might do that. I’m using a line plot to show
+the differences in the data from countries in `group_a` vs `group_b`.
+Can you make something similar?
+
+![](line-plot.png)
+
+#### Exploring residuals
+
+Compare the model residuals (extracted via `augment()`) for countries
+from `group_a` vs `group_b`. What do you find? Is there a plot you can
+create to show the differences?
+
+In the plot below, I visualize the residuals from two countries from
+`group_a` and two from `group_b` (the same countries from the plot
+above). Look at how the residuals balloon in the models that struggle to
+account for the underlying data. Can you make something similar?
+
+![](residual-plot.png)
+
+### I want to do more!
+
+- Make APA style tables for the models that you fit in this lab.
+- After making your tables, try outputting them to word document.
+- Start working on [Homework 04](hw-04.md).

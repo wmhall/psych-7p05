@@ -63,7 +63,7 @@ Taking a sufficiently difficult/ambitious task to completion would certainly qua
 
 ### A Word of Warning
 
-The Candy Data sets are in a raw format. The data comes straight from people on the internet completing an anonymous survey. As I'm sure you can imagine, this means that the datasets may contain offensive and downright terrifying responses. I'm sure you have all had experiences with horrible things being shared online, but if you want to limit your exposure when working with this data, I would avoid looking too closely at the openended text responses.
+The Candy Data sets are in a raw format. The data comes straight from people on the internet completing an anonymous survey. As I'm sure you can imagine, this means that the datasets may contain offensive and downright terrifying responses. I'm sure you have all had experiences with horrible things being shared online, but if you want to limit your exposure when working with this data, I would avoid looking too closely at the open-ended text responses.
 
 ### Rubric
 

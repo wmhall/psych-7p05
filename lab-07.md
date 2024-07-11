@@ -27,10 +27,11 @@ country, fit a linear model predicting `lifeExp` from `year`.
 Tidy the model outputs using functions from `broom`. Use your `dplyr`
 skills to sort through the parameter estimates. `filter()` and
 `arrange()` will be helpful here. You should be able to do things like
-arrange the countries by p-value.
+filter for different parameter estimates (I.e., Intercept vs. Year).
 
-Can you create a useful plot of the parameter estimates from the
-different countries?
+Can you create a useful plot of the parameter estimates for the
+relationship between `lifeExp` from `year` for the different countries?
+To do this, you might need to explore the `bind_rows()` function.
 
 ### Explore the models
 
@@ -66,4 +67,8 @@ account for the underlying data. Can you make something similar?
 
 - Make APA style tables for the models that you fit in this lab.
 - After making your tables, try outputting them to word document.
-- Start working on [Homework 04](hw-04.md).
+- Use [inline code](https://r4ds.hadley.nz/quarto#inline-code) to write
+  up the results from one of your regression models
+- Try fitting a different type of model (e.g, `cor()`, `aov()`, `glm()`,
+  etc.) using one of the built in dataset in R. For a list of the built
+  in datasets, type `data()` in your R Console.

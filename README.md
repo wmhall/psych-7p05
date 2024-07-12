@@ -24,6 +24,8 @@ This repo contains the labs and homework for PSYC-7P05.
 
 [Lab 9](lab-09.md)
 
+[Lab 10](lab-10.md)
+
 ## Homework
 
 [Homework guidelines](homework-guidelines.md)

@@ -1,74 +1,158 @@
 # Lab 07
 
 
-### Fit a linear model
+## Overview
 
-Using the `gapminder` dataset, fit a linear model (`lm`) in which you
-predict `lifeExp` from `year`.
+This lab will show you a few functions from `stringr` that we didn’t
+have time to cover in the lecture.
 
-Once you’ve fit your model, explore the various tidiers from the `broom`
-package. You should be able to explain how `tidy()`, `glance()`, and
-`augment()` differ from one another in the types of things they tell you
-about your model.
+## `stringr`
 
-### Fit models to subsets of the data
+### String splitting by delimiter
 
-| group_a                  | group_b   |
-|:-------------------------|:----------|
-| Iraq                     | Morocco   |
-| Zambia                   | Indonesia |
-| Namibia                  | Sweden    |
-| Zimbabwe                 | Ecuador   |
-| Central African Republic | Brazil    |
+You can use `str_split()` to split strings by a delimiter.
 
-Pick two countries from `group_a` and two from `group_b`, and for each
-country, fit a linear model predicting `lifeExp` from `year`.
+Here we split on a single space `" "`.
 
-Tidy the model outputs using functions from `broom`. Use your `dplyr`
-skills to sort through the parameter estimates. `filter()` and
-`arrange()` will be helpful here. You should be able to do things like
-filter for different parameter estimates (I.e., Intercept vs. Year).
+``` r
+str_split(fruit, pattern = " ") |> 
+  head(5)
+```
 
-Can you create a useful plot of the parameter estimates for the
-relationship between `lifeExp` from `year` for the different countries?
-To do this, you might need to explore the `bind_rows()` function.
+    [[1]]
+    [1] "apple"
 
-### Explore the models
+    [[2]]
+    [1] "apricot"
 
-#### Find poorly fitting models
+    [[3]]
+    [1] "avocado"
 
-For the four countries that you selected, identify poorly fitting models
-by looking at the various fit statistics you can extract with the
-`broom` package.
+    [[4]]
+    [1] "banana"
 
-Visualize the data associated with the four countries you selected so
-that you can see when a linear model might not be appropriate.
+    [[5]]
+    [1] "bell"   "pepper"
 
-Here is an idea of how you might do that. I’m using a line plot to show
-the differences in the data from countries in `group_a` vs `group_b`.
-Can you make something similar?
+We get a *list* back. This can be a bit annoying to work with, but it
+must be so! `str_split()` must return list because who knows how many
+pieces there will be? Thus, you need something that can house vectors of
+different lengths.
 
-![](line-plot.png)
+Take a close look a the list and make sure you understand what
+`str_split()` is doing.
 
-#### Exploring residuals
+If you are willing to commit to the number of pieces, you can use
+`str_split_fixed()` and get a character matrix.
 
-Compare the model residuals (extracted via `augment()`) for countries
-from `group_a` vs `group_b`. What do you find? Is there a plot you can
-create to show the differences?
+``` r
+str_split_fixed(fruit, pattern = " ", n = 2) |> 
+  head(5)
+```
 
-In the plot below, I visualize the residuals from two countries from
-`group_a` and two from `group_b` (the same countries from the plot
-above). Look at how the residuals balloon in the models that struggle to
-account for the underlying data. Can you make something similar?
+         [,1]      [,2]    
+    [1,] "apple"   ""      
+    [2,] "apricot" ""      
+    [3,] "avocado" ""      
+    [4,] "banana"  ""      
+    [5,] "bell"    "pepper"
 
-![](residual-plot.png)
+Check out the `class()` of the object returned by `str_split_fixed()`.
+What do you learn? Take a look at help pages for `matrix` and `array` to
+learn more about the returned objects.
 
-### I want to do more!
+If the to-be-split variable lives in a data frame, `tidyr::separate()`
+will split it into 2 or more variables.
 
-- Make APA style tables for the models that you fit in this lab.
-- After making your tables, try outputting them to word document.
-- Use [inline code](https://r4ds.hadley.nz/quarto#inline-code) to write
-  up the results from one of your regression models
-- Try fitting a different type of model (e.g, `cor()`, `aov()`, `glm()`,
-  etc.) using one of the built in dataset in R. For a list of the built
-  in datasets, type `data()` in your R Console.
+``` r
+my_fruit_df <- tibble(fruit)
+my_fruit_df |> 
+  separate(fruit, into = c("pre", "post"), sep = " ") |> 
+  print(n = 10)
+```
+
+    Warning: Expected 2 pieces. Missing pieces filled with `NA` in 69 rows [1, 2, 3, 4, 6,
+    7, 8, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, ...].
+
+    # A tibble: 80 × 2
+       pre          post  
+       <chr>        <chr> 
+     1 apple        <NA>  
+     2 apricot      <NA>  
+     3 avocado      <NA>  
+     4 banana       <NA>  
+     5 bell         pepper
+     6 bilberry     <NA>  
+     7 blackberry   <NA>  
+     8 blackcurrant <NA>  
+     9 blood        orange
+    10 blueberry    <NA>  
+    # ℹ 70 more rows
+
+Take a close look at the returned data frame and make sure you
+understand what `separate()` is doing.
+
+### Collapse a vector
+
+You can collapse a character vector of length `n > 1` to a single string
+with `str_c()`.
+
+Give it shot by running the code below:
+
+``` r
+head(fruit) |> 
+  str_c(collapse = ", ")
+```
+
+    [1] "apple, apricot, avocado, banana, bell pepper, bilberry"
+
+### Create a character vector by catenating multiple vectors
+
+If you have two or more character vectors of the same length, you can
+glue them together element-wise, to get a new vector of that length.
+Here are some … awful smoothie flavors?
+
+``` r
+str_c(fruit[1:4], fruit[5:8], sep = " & ")
+```
+
+    [1] "apple & bell pepper"   "apricot & bilberry"    "avocado & blackberry" 
+    [4] "banana & blackcurrant"
+
+Element-wise catenation can be combined with collapsing.
+
+``` r
+str_c(fruit[1:4], fruit[5:8], sep = " & ", collapse = ", ")
+```
+
+    [1] "apple & bell pepper, apricot & bilberry, avocado & blackberry, banana & blackcurrant"
+
+If the to-be-combined vectors are variables in a data frame, you can use
+`tidyr::unite()` to make a single new variable from them.
+
+``` r
+fruit_df <- tibble(
+  fruit1 = fruit[1:4],
+  fruit2 = fruit[5:8]
+)
+
+fruit_df %>% 
+  unite("flavor_combo", fruit1, fruit2, sep = " & ")
+```
+
+    # A tibble: 4 × 1
+      flavor_combo         
+      <chr>                
+    1 apple & bell pepper  
+    2 apricot & bilberry   
+    3 avocado & blackberry 
+    4 banana & blackcurrant
+
+## I want to do more!
+
+- Work through the
+  [stringr](https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html)
+  vignette.
+- Explore the [glue](https://glue.tidyverse.org/) package.
+- Learn more about regular expressions by completing
+  [this](https://regexone.com/) tutorial.

@@ -1,158 +1,80 @@
 # Lab 09
 
 
-## Overview
+### `readr`
 
-This lab will show you a few functions from `stringr` that we didn’t
-have time to cover in the lecture.
+We’ve been loading the Gapminder data as a data frame from the
+`gapminder` package. We haven’t been explicitly writing any data or
+derived results to file. In real life, you’ll bring rectangular data
+into and out of R all the time.
 
-## `stringr`
+We could load the data from the `gapminder` package as usual, but
+instead we will load it from a tab delimited file.
 
-### String splitting by delimiter
+Use the `readr` package to read in the file `gapminder.tsv`.
 
-You can use `str_split()` to split strings by a delimiter.
+#### Inspect the gapminder data
 
-Here we split on a single space `" "`.
+Assign the data an object called `gap_tsv`. Use `typeof()` and `str()`
+to learn about `gap_tsv`.
 
-``` r
-str_split(fruit, pattern = " ") |> 
-  head(5)
-```
-
-    [[1]]
-    [1] "apple"
-
-    [[2]]
-    [1] "apricot"
-
-    [[3]]
-    [1] "avocado"
-
-    [[4]]
-    [1] "banana"
-
-    [[5]]
-    [1] "bell"   "pepper"
-
-We get a *list* back. This can be a bit annoying to work with, but it
-must be so! `str_split()` must return list because who knows how many
-pieces there will be? Thus, you need something that can house vectors of
-different lengths.
-
-Take a close look a the list and make sure you understand what
-`str_split()` is doing.
-
-If you are willing to commit to the number of pieces, you can use
-`str_split_fixed()` and get a character matrix.
+Next, load the `gapminder` package.
 
 ``` r
-str_split_fixed(fruit, pattern = " ", n = 2) |> 
-  head(5)
+library(gapminder)
 ```
 
-         [,1]      [,2]    
-    [1,] "apple"   ""      
-    [2,] "apricot" ""      
-    [3,] "avocado" ""      
-    [4,] "banana"  ""      
-    [5,] "bell"    "pepper"
+Compare (using `str()`, `typeof()`, etc) `gap_tsv` to the `gapminder`
+data frame that is part of the `gapminder` package. What are the key
+differences?
 
-Check out the `class()` of the object returned by `str_split_fixed()`.
-What do you learn? Take a look at help pages for `matrix` and `array` to
-learn more about the returned objects.
+#### Wrangle the gapminder data
 
-If the to-be-split variable lives in a data frame, `tidyr::separate()`
-will split it into 2 or more variables.
+Wrangle `gap_tsv` so that the column types the same as the `gapminder`
+data frame. To do this, you’ll need to use coercion.
 
-``` r
-my_fruit_df <- tibble(fruit)
-my_fruit_df |> 
-  separate(fruit, into = c("pre", "post"), sep = " ") |> 
-  print(n = 10)
-```
+Assign your wrangled `gap_tsv` to an object called `gap_out`
 
-    Warning: Expected 2 pieces. Missing pieces filled with `NA` in 69 rows [1, 2, 3, 4, 6,
-    7, 8, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, ...].
+#### Write out your data
 
-    # A tibble: 80 × 2
-       pre          post  
-       <chr>        <chr> 
-     1 apple        <NA>  
-     2 apricot      <NA>  
-     3 avocado      <NA>  
-     4 banana       <NA>  
-     5 bell         pepper
-     6 bilberry     <NA>  
-     7 blackberry   <NA>  
-     8 blackcurrant <NA>  
-     9 blood        orange
-    10 blueberry    <NA>  
-    # ℹ 70 more rows
+Write out `gap_out` to a csv file.
 
-Take a close look at the returned data frame and make sure you
-understand what `separate()` is doing.
+Read in the csv file you made. What do you notice about the column
+types?
 
-### Collapse a vector
+### `readxl`
 
-You can collapse a character vector of length `n > 1` to a single string
-with `str_c()`.
+Read in the file `favourite-food.xlsx`.
 
-Give it shot by running the code below:
+There are many problems with this data file. Your mission is to fix
+those problems. Not all of the problems will be fixable using data
+import arguments. Cleaning this data will require tools that we covered
+earlier in the course.
 
-``` r
-head(fruit) |> 
-  str_c(collapse = ", ")
-```
+You should be aiming for a dataset that looks something like this:
 
-    [1] "apple, apricot, avocado, banana, bell pepper, bilberry"
+    # A tibble: 5 × 5
+      student_id favourite_food     mealplan              age ses   
+           <dbl> <chr>              <chr>               <dbl> <chr> 
+    1          1 Strawberry yoghurt Lunch only              4 High  
+    2          2 French fries       Lunch only              5 Middle
+    3          3 <NA>               Breakfast and lunch     7 Low   
+    4          4 Anchovies          Lunch only             NA Middle
+    5          5 Pizza              Breakfast and lunch     5 High  
 
-### Create a character vector by catenating multiple vectors
+### `haven`
 
-If you have two or more character vectors of the same length, you can
-glue them together element-wise, to get a new vector of that length.
-Here are some … awful smoothie flavors?
+For this part of the lab, we will work with the data file
+`breakfast.sav`. You can learn more about it
+[here](https://www.ibm.com/support/knowledgecenter/SSLVMB_sub/statistics_mainhelp_ddita/spss/tutorials/data_files.html).
 
-``` r
-str_c(fruit[1:4], fruit[5:8], sep = " & ")
-```
+Read in `breakfast.sav`.
 
-    [1] "apple & bell pepper"   "apricot & bilberry"    "avocado & blackberry" 
-    [4] "banana & blackcurrant"
+Create a `csv` version of the data set. Check your `csv` to make sure
+you don’t lose important information. If you do lose information,
+wrangle the data until you can create a `csv` where nothing is lost.
 
-Element-wise catenation can be combined with collapsing.
+### But I want to do more!
 
-``` r
-str_c(fruit[1:4], fruit[5:8], sep = " & ", collapse = ", ")
-```
-
-    [1] "apple & bell pepper, apricot & bilberry, avocado & blackberry, banana & blackcurrant"
-
-If the to-be-combined vectors are variables in a data frame, you can use
-`tidyr::unite()` to make a single new variable from them.
-
-``` r
-fruit_df <- tibble(
-  fruit1 = fruit[1:4],
-  fruit2 = fruit[5:8]
-)
-
-fruit_df %>% 
-  unite("flavor_combo", fruit1, fruit2, sep = " & ")
-```
-
-    # A tibble: 4 × 1
-      flavor_combo         
-      <chr>                
-    1 apple & bell pepper  
-    2 apricot & bilberry   
-    3 avocado & blackberry 
-    4 banana & blackcurrant
-
-## I want to do more!
-
-- Work through the
-  [stringr](https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html)
-  vignette.
-- Explore the [glue](https://glue.tidyverse.org/) package.
-- Learn more about regular expressions by completing
-  [this](https://regexone.com/) tutorial.
+- Explore the `zap_label()` and `zap_labels()` functions that are part
+  of the `haven` package.

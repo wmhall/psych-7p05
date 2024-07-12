@@ -1,79 +1,74 @@
-# Lab 09
+# Lab 10
 
 
-## Overview
+### Fit a linear model
 
-This lab will show you a few functions from `forcats` that we didn’t
-have time to cover in the lecture.
+Using the `gapminder` dataset, fit a linear model (`lm`) in which you
+predict `lifeExp` from `year`.
 
-## `forcats`
+Once you’ve fit your model, explore the various tidiers from the `broom`
+package. You should be able to explain how `tidy()`, `glance()`, and
+`augment()` differ from one another in the types of things they tell you
+about your model.
 
-To explore factors, we will use the `starwars` data that comes as part
-of the `tidyverse`. You can learn more about the data
-[here](https://dplyr.tidyverse.org/reference/starwars.html).
+### Fit models to subsets of the data
 
-### `fct_lump()`
+| group_a                  | group_b   |
+|:-------------------------|:----------|
+| Iraq                     | Morocco   |
+| Zambia                   | Indonesia |
+| Namibia                  | Sweden    |
+| Zimbabwe                 | Ecuador   |
+| Central African Republic | Brazil    |
 
-`fct_lump()` lets you lump together all the small groups in a factor to
-make a plot or table simpler.
+Pick two countries from `group_a` and two from `group_b`, and for each
+country, fit a linear model predicting `lifeExp` from `year`.
 
-To demonstrate `fct_lump()`, first take a look at the plot below. Note
-my use of `fct_reorder()` within `ggplot()`. Typically, we’ve used
-`fct_*` functions in combination with `mutate()`. Here I show that you
-can use `fct_*` functions in a `ggplot()` call.
+Tidy the model outputs using functions from `broom`. Use your `dplyr`
+skills to sort through the parameter estimates. `filter()` and
+`arrange()` will be helpful here. You should be able to do things like
+filter for different parameter estimates (I.e., Intercept vs. Year).
 
-Examining this plot, you’ll notice that several species occur quite
-infrequently (e.g., Ewok).
+Can you create a useful plot of the parameter estimates for the
+relationship between `lifeExp` from `year` for the different countries?
+To do this, you might need to explore the `bind_rows()` function.
 
-``` r
-starwars |>
-  count(species) |>
-  filter(!is.na(species)) |> 
-  ggplot(aes(y = n, x = fct_reorder(species, n))) +
-  geom_col() + 
-  coord_flip()
-```
+### Explore the models
 
-![](lab-10_files/figure-commonmark/unnamed-chunk-2-1.png)
+#### Find poorly fitting models
 
-`fct_lump()` lets you lump together all the small groups into a single
-“Other” factor. You can see it in action here.
+For the four countries that you selected, identify poorly fitting models
+by looking at the various fit statistics you can extract with the
+`broom` package.
 
-``` r
-starwars |>   
-filter(!is.na(species)) |>
-  count(species = fct_lump(f = species, n = 3))
-```
+Visualize the data associated with the four countries you selected so
+that you can see when a linear model might not be appropriate.
 
-    # A tibble: 4 × 2
-      species     n
-      <fct>   <int>
-    1 Droid       6
-    2 Gungan      3
-    3 Human      35
-    4 Other      39
+Here is an idea of how you might do that. I’m using a line plot to show
+the differences in the data from countries in `group_a` vs `group_b`.
+Can you make something similar?
 
-Here I use `fct_lump()` to remake the plot above. Notice how
-`fct_lump()` has simplified our graph.
+![](line-plot.png)
 
-``` r
-starwars |>   
-filter(!is.na(species)) |>
-  count(species = fct_lump(f = species, n = 3)) |> 
-  ggplot(aes(y = n, x = fct_reorder(species, n))) +
-  geom_col() + 
-  coord_flip()
-```
+#### Exploring residuals
 
-![](lab-10_files/figure-commonmark/unnamed-chunk-4-1.png)
+Compare the model residuals (extracted via `augment()`) for countries
+from `group_a` vs `group_b`. What do you find? Is there a plot you can
+create to show the differences?
 
-Try adjusting the `n` argument in the `fct_lump()` function.
+In the plot below, I visualize the residuals from two countries from
+`group_a` and two from `group_b` (the same countries from the plot
+above). Look at how the residuals balloon in the models that struggle to
+account for the underlying data. Can you make something similar?
 
-Use `fct_relevel()` to move around the Other category on your plot.
+![](residual-plot.png)
 
-## I want to do more!
+### I want to do more!
 
-- Work through the
-  [forcats](https://forcats.tidyverse.org/articles/forcats.html)
-  vignette.
-- Start [Homework 4](hw-04.md).
+- Make APA style tables for the models that you fit in this lab.
+- After making your tables, try outputting them to word document.
+- Use [inline code](https://r4ds.hadley.nz/quarto#inline-code) to write
+  up the results from one of your regression models
+- Try fitting a different type of model (e.g, `cor()`, `aov()`, `glm()`,
+  etc.) using one of the built in dataset in R. For a list of the built
+  in datasets, type `data()` in your R Console.

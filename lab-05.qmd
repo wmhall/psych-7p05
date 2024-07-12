@@ -1,5 +1,5 @@
 ---
-title: "Lab 05: `Tidyr` and Joins"
+title: "Lab 5: `Tidyr` and Joins"
 format: gfm
 ---
 

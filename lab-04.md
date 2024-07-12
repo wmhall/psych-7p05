@@ -1,4 +1,4 @@
-# Lab 04: `ggplot2`
+# Lab 4: `ggplot2`
 
 
 ## Penguins

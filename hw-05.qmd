@@ -1,5 +1,5 @@
 ---
-title: "Homework 05"
+title: "Homework 5"
 format: gfm
 ---
 

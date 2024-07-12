@@ -1,5 +1,5 @@
 ---
-title: "Lab 02: Quarto"
+title: "Lab 2: Quarto"
 format: gfm
 ---
 

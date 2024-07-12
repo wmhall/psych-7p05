@@ -1,4 +1,4 @@
-# Lab 03: `dplyr`
+# Lab 3: `dplyr`
 
 
 ### Before you start

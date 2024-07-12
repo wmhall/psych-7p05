@@ -1,4 +1,4 @@
-# Lab 02: Quarto
+# Lab 2: Quarto
 
 
 ## Overview

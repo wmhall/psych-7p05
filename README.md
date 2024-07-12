@@ -8,13 +8,13 @@ This repo contains the labs and homework for PSYC-7P05.
 
 [Lab 1: Getting started with R](lab-01.md)
 
-[Lab 02: Quarto](lab-02.md)
+[Lab 2: Quarto](lab-02.md)
 
-[Lab 03: dplyr](lab-03.md)
+[Lab 3: dplyr](lab-03.md)
 
 [Lab 4: ggplot2](lab-04.md)
 
-[Lab 5: `Tidyr` and Joins](lab-05.md)
+[Lab 5: Tidyr and Joins](lab-05.md)
 
 [Lab 6: Vectors](lab-06.md)
 

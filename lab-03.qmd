@@ -1,5 +1,5 @@
 ---
-title: "Lab 03: Introduction to dplyr"
+title: "Lab 03: `dplyr`"
 format: gfm
 ---
 

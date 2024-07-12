@@ -1,5 +1,5 @@
 ---
-title: "Lab 08"
+title: "Lab 8: Factors"
 format: gfm
 ---
 

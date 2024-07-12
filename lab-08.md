@@ -1,4 +1,4 @@
-# Lab 08
+# Lab 8: Factors
 
 
 ## Overview

@@ -6,25 +6,25 @@ This repo contains the labs and homework for PSYC-7P05.
 
 ## Labs
 
-[Lab 1](lab-01.md)
+[Lab 1: Getting started with R](lab-01.md)
 
-[Lab 2](lab-02.md)
+[Lab 02: Quarto](lab-02.md)
 
-[Lab 3](lab-03.md)
+[Lab 03: dplyr](lab-03.md)
 
-[Lab 4](lab-04.md)
+[Lab 4: ggplot2](lab-04.md)
 
-[Lab 5](lab-05.md)
+[Lab 5: `Tidyr` and Joins](lab-05.md)
 
-[Lab 6](lab-06.md)
+[Lab 6: Vectors](lab-06.md)
 
-[Lab 7](lab-07.md)
+[Lab 7: Strings](lab-07.md)
 
-[Lab 8](lab-08.md)
+[Lab 8: Factors](lab-08.md)
 
-[Lab 9](lab-09.md)
+[Lab 9: Data in/out](lab-09.md)
 
-[Lab 10](lab-10.md)
+[Lab 10: Modeling](lab-10.md)
 
 ## Homework
 

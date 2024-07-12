@@ -1,4 +1,4 @@
-# Lab 07
+# Lab 7: Strings
 
 
 ## Overview

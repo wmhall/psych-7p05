@@ -1,4 +1,4 @@
-# Lab 03: Introduction to dplyr
+# Lab 03: `dplyr`
 
 
 ### Before you start

@@ -1,4 +1,4 @@
-# Lab 05
+# Lab 05: `Tidyr` and Joins
 
 
 ## `tidyr`’s pivot functions

@@ -1,5 +1,5 @@
 ---
-title: "lab-04"
+title: "Lab 04: `ggplot2`"
 format: gfm
 ---
 

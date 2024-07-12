@@ -1,4 +1,4 @@
-# Lab 06
+# Lab 6: Vectors
 
 
 ### How to approach this lab
@@ -101,13 +101,13 @@ google) can be provided as vectors.
 rnorm(5, mean = 10^(1:5))
 ```
 
-    [1]     9.534442    99.142430  1001.384478 10000.512497 99998.088459
+    [1] 9.472406e+00 9.886266e+01 9.999744e+02 1.000024e+04 1.000011e+05
 
 ``` r
 round(rnorm(5, sd = 10^(0:4)), 2)
 ```
 
-    [1]    -1.13    24.45    64.83 -1553.91  5103.26
+    [1]    0.86   19.74  -91.64  856.88 -549.30
 
 This could be awesome in some settings, but dangerous in others, i.e. if
 you exploit this by mistake and get no warning. This is one of the
@@ -205,7 +205,7 @@ w <- round(rnorm(n), 2)
 w
 ```
 
-    [1]  0.65 -0.60 -0.60 -0.95 -0.12 -1.23 -0.25  0.27
+    [1] -0.31 -1.32 -0.06 -0.03 -0.43 -1.50 -1.28 -0.77
 
 ``` r
 # numeric floating point
@@ -231,7 +231,7 @@ z <- runif(n) > 0.3 # logical
 z
 ```
 
-    [1] FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+    [1]  TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE FALSE
 
 Use `str()` and any other functions you wish to inspect these objects,
 such as `length()`, `typeof()`, `is.numeric()`, `is.logical()`, etc.
@@ -242,7 +242,7 @@ functions you can experiment with.
 str(w)
 ```
 
-     num [1:8] 0.65 -0.6 -0.6 -0.95 -0.12 -1.23 -0.25 0.27
+     num [1:8] -0.31 -1.32 -0.06 -0.03 -0.43 -1.5 -1.28 -0.77
 
 ``` r
 length(x)
@@ -260,7 +260,7 @@ is.logical(y)
 as.numeric(z)
 ```
 
-    [1] 0 1 1 1 1 1 1 1
+    [1] 1 1 0 0 0 1 1 0
 
 ### Indexing a vector
 
@@ -291,7 +291,7 @@ understand them.
 w
 ```
 
-    [1]  0.65 -0.60 -0.60 -0.95 -0.12 -1.23 -0.25  0.27
+    [1] -0.31 -1.32 -0.06 -0.03 -0.43 -1.50 -1.28 -0.77
 
 ``` r
 names(w) <- letters[seq_along(w)]
@@ -299,22 +299,22 @@ w
 ```
 
         a     b     c     d     e     f     g     h 
-     0.65 -0.60 -0.60 -0.95 -0.12 -1.23 -0.25  0.27 
+    -0.31 -1.32 -0.06 -0.03 -0.43 -1.50 -1.28 -0.77 
 
 ``` r
 w < 0
 ```
 
-        a     b     c     d     e     f     g     h 
-    FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE 
+       a    b    c    d    e    f    g    h 
+    TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE 
 
 ``` r
 #What is which() doing?
 which(w < 0)
 ```
 
-    b c d e f g 
-    2 3 4 5 6 7 
+    a b c d e f g h 
+    1 2 3 4 5 6 7 8 
 
 ``` r
 # Here is where I index using a logical vector. 
@@ -323,8 +323,8 @@ which(w < 0)
 w[w < 0]
 ```
 
-        b     c     d     e     f     g 
-    -0.60 -0.60 -0.95 -0.12 -1.23 -0.25 
+        a     b     c     d     e     f     g     h 
+    -0.31 -1.32 -0.06 -0.03 -0.43 -1.50 -1.28 -0.77 
 
 ``` r
 seq(from = 1, to = length(w), by = 2)
@@ -337,21 +337,21 @@ w[seq(from = 1, to = length(w), by = 2)]
 ```
 
         a     c     e     g 
-     0.65 -0.60 -0.12 -0.25 
+    -0.31 -0.06 -0.43 -1.28 
 
 ``` r
 w[-c(2, 5)]
 ```
 
         a     c     d     f     g     h 
-     0.65 -0.60 -0.95 -1.23 -0.25  0.27 
+    -0.31 -0.06 -0.03 -1.50 -1.28 -0.77 
 
 ``` r
 w[c('c', 'a', 'f')]
 ```
 
         c     a     f 
-    -0.60  0.65 -1.23 
+    -0.06 -0.31 -1.50 
 
 ### Lists
 
@@ -591,25 +591,25 @@ my_data_frame <- data.frame(w = round(rnorm(n), 2),
 my_data_frame
 ```
 
-          w x y    z v
-    1 -1.50 1 A TRUE I
-    2 -1.32 2 B TRUE I
-    3  1.68 3 C TRUE J
-    4 -0.46 4 D TRUE J
-    5 -0.85 5 E TRUE K
-    6 -0.75 6 F TRUE K
-    7  0.41 7 G TRUE L
-    8 -0.09 8 H TRUE L
+          w x y     z v
+    1  1.16 1 A  TRUE I
+    2 -0.35 2 B FALSE I
+    3  1.04 3 C  TRUE J
+    4 -1.51 4 D FALSE J
+    5  0.34 5 E  TRUE K
+    6  0.15 6 F  TRUE K
+    7 -0.01 7 G  TRUE L
+    8 -0.50 8 H  TRUE L
 
 ``` r
 str(my_data_frame)
 ```
 
     'data.frame':   8 obs. of  5 variables:
-     $ w: num  -1.5 -1.32 1.68 -0.46 -0.85 -0.75 0.41 -0.09
+     $ w: num  1.16 -0.35 1.04 -1.51 0.34 0.15 -0.01 -0.5
      $ x: int  1 2 3 4 5 6 7 8
      $ y: chr  "A" "B" "C" "D" ...
-     $ z: logi  TRUE TRUE TRUE TRUE TRUE TRUE ...
+     $ z: logi  TRUE FALSE TRUE FALSE TRUE TRUE ...
      $ v: chr  "I" "I" "J" "J" ...
 
 ``` r
@@ -651,15 +651,15 @@ my_data_frame$v # using dollar sign and name, when possible
 my_data_frame[c("x", "z")] # get multiple variables
 ```
 
-      x    z
-    1 1 TRUE
-    2 2 TRUE
-    3 3 TRUE
-    4 4 TRUE
-    5 5 TRUE
-    6 6 TRUE
-    7 7 TRUE
-    8 8 TRUE
+      x     z
+    1 1  TRUE
+    2 2 FALSE
+    3 3  TRUE
+    4 4 FALSE
+    5 5  TRUE
+    6 6  TRUE
+    7 7  TRUE
+    8 8  TRUE
 
 ``` r
 str(my_data_frame[c("x", "z")]) # returns a data.frame
@@ -667,7 +667,7 @@ str(my_data_frame[c("x", "z")]) # returns a data.frame
 
     'data.frame':   8 obs. of  2 variables:
      $ x: int  1 2 3 4 5 6 7 8
-     $ z: logi  TRUE TRUE TRUE TRUE TRUE TRUE ...
+     $ z: logi  TRUE FALSE TRUE FALSE TRUE TRUE ...
 
 Remember data.frames are lists. You can convert a list to a data.frame
 using the `as.data.frame()` function. But remember, it is an absolute
@@ -694,14 +694,14 @@ as.data.frame(first_list)
 ```
 
           w x y     z v
-    1 -1.13 1 A  TRUE I
-    2 -0.64 2 B FALSE I
-    3  1.51 3 C  TRUE J
-    4  1.82 4 D FALSE J
-    5  0.31 5 E  TRUE K
-    6  0.09 6 F FALSE K
-    7  0.71 7 G  TRUE L
-    8 -1.33 8 H  TRUE L
+    1 -0.48 1 A FALSE I
+    2 -1.04 2 B FALSE I
+    3 -1.85 3 C  TRUE J
+    4  0.32 4 D  TRUE J
+    5  0.83 5 E FALSE K
+    6  0.64 6 F FALSE K
+    7 -1.13 7 G  TRUE L
+    8  1.96 8 H  TRUE L
 
 ``` r
 as.data.frame(second_list)
@@ -731,34 +731,34 @@ yourself in a situation where you’ll need them.
 my_data_frame
 ```
 
-          w x y    z v
-    1 -1.50 1 A TRUE I
-    2 -1.32 2 B TRUE I
-    3  1.68 3 C TRUE J
-    4 -0.46 4 D TRUE J
-    5 -0.85 5 E TRUE K
-    6 -0.75 6 F TRUE K
-    7  0.41 7 G TRUE L
-    8 -0.09 8 H TRUE L
+          w x y     z v
+    1  1.16 1 A  TRUE I
+    2 -0.35 2 B FALSE I
+    3  1.04 3 C  TRUE J
+    4 -1.51 4 D FALSE J
+    5  0.34 5 E  TRUE K
+    6  0.15 6 F  TRUE K
+    7 -0.01 7 G  TRUE L
+    8 -0.50 8 H  TRUE L
 
 ``` r
 my_data_frame$z
 ```
 
-    [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+    [1]  TRUE FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE
 
 ``` r
 i_want_this <- "z"
 my_data_frame[[i_want_this]]
 ```
 
-    [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+    [1]  TRUE FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE
 
 ``` r
 str(my_data_frame[[i_want_this]]) # we get an atomic vector
 ```
 
-     logi [1:8] TRUE TRUE TRUE TRUE TRUE TRUE ...
+     logi [1:8] TRUE FALSE TRUE FALSE TRUE TRUE ...
 
 ##### Reviewing vector-style indexing of a data.frame:
 
@@ -789,21 +789,21 @@ my_data_frame[i_want_this] # index with a vector of variable names
 ```
 
           w v
-    1 -1.50 I
-    2 -1.32 I
-    3  1.68 J
-    4 -0.46 J
-    5 -0.85 K
-    6 -0.75 K
-    7  0.41 L
-    8 -0.09 L
+    1  1.16 I
+    2 -0.35 I
+    3  1.04 J
+    4 -1.51 J
+    5  0.34 K
+    6  0.15 K
+    7 -0.01 L
+    8 -0.50 L
 
 ``` r
 str(my_data_frame[c("w", "v")])
 ```
 
     'data.frame':   8 obs. of  2 variables:
-     $ w: num  -1.5 -1.32 1.68 -0.46 -0.85 -0.75 0.41 -0.09
+     $ w: num  1.16 -0.35 1.04 -1.51 0.34 0.15 -0.01 -0.5
      $ v: chr  "I" "I" "J" "J" ...
 
 ##### Matrix-style indexing (I called this matrix subsetting in class) of a data.frame:
@@ -836,24 +836,22 @@ str(my_data_frame[ , "v"])
 my_data_frame[c(2, 4, 7), c(1, 4)] # awful and difficult to understand but syntax works
 ```
 
-          w    z
-    2 -1.32 TRUE
-    4 -0.46 TRUE
-    7  0.41 TRUE
+          w     z
+    2 -0.35 FALSE
+    4 -1.51 FALSE
+    7 -0.01  TRUE
 
 ``` r
 my_data_frame[my_data_frame$z, ]
 ```
 
           w x y    z v
-    1 -1.50 1 A TRUE I
-    2 -1.32 2 B TRUE I
-    3  1.68 3 C TRUE J
-    4 -0.46 4 D TRUE J
-    5 -0.85 5 E TRUE K
-    6 -0.75 6 F TRUE K
-    7  0.41 7 G TRUE L
-    8 -0.09 8 H TRUE L
+    1  1.16 1 A TRUE I
+    3  1.04 3 C TRUE J
+    5  0.34 5 E TRUE K
+    6  0.15 6 F TRUE K
+    7 -0.01 7 G TRUE L
+    8 -0.50 8 H TRUE L
 
 ### I want to do more!
 

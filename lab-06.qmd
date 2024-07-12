@@ -1,5 +1,5 @@
 ---
-title: "Lab 06"
+title: "Lab 6: Vectors"
 format: gfm
 ---
 

@@ -1,4 +1,4 @@
-# Lab 10
+# Lab 10: Modeling
 
 
 ### Fit a linear model

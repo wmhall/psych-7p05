@@ -128,8 +128,7 @@ str_c(fruit[1:4], fruit[5:8], sep = " & ", collapse = ", ")
     [1] "apple & bell pepper, apricot & bilberry, avocado & blackberry, banana & blackcurrant"
 
 If the to-be-combined vectors are variables in a data frame, you can use
-`str_c()` in combination with `mutate()` to make a new variable from
-them.
+`tidyr::unite()` to make a single new variable from them.
 
 ``` r
 fruit_df <- tibble(
@@ -137,17 +136,17 @@ fruit_df <- tibble(
   fruit2 = fruit[5:8]
 )
 
-fruit_df |> 
-    mutate(flavor_combo = str_c(fruit1, fruit2, sep = " & "))
+fruit_df %>% 
+  unite("flavor_combo", fruit1, fruit2, sep = " & ")
 ```
 
-    # A tibble: 4 × 3
-      fruit1  fruit2       flavor_combo         
-      <chr>   <chr>        <chr>                
-    1 apple   bell pepper  apple & bell pepper  
-    2 apricot bilberry     apricot & bilberry   
-    3 avocado blackberry   avocado & blackberry 
-    4 banana  blackcurrant banana & blackcurrant
+    # A tibble: 4 × 1
+      flavor_combo         
+      <chr>                
+    1 apple & bell pepper  
+    2 apricot & bilberry   
+    3 avocado & blackberry 
+    4 banana & blackcurrant
 
 ## I want to do more!
 

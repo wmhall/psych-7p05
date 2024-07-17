@@ -1,4 +1,4 @@
-# Lab 10: Modeling
+# Lab 10: Statistical Models
 
 
 ### Fit a linear model

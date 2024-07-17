@@ -1,5 +1,5 @@
 ---
-title: "Lab 10: Modeling"
+title: "Lab 10: Statistical Models"
 format: gfm
 ---
 

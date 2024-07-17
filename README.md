@@ -24,7 +24,7 @@ This repo contains the labs and homework for PSYC-7P05.
 
 [Lab 9: Data in/out](lab-09.md)
 
-[Lab 10: Modeling](lab-10.md)
+[Lab 10: Statistical Models](lab-10.md)
 
 ## Homework
 

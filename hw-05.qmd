@@ -60,6 +60,7 @@ Now that your data us ready to analyze, complete the task you set out to complet
 Taking a sufficiently difficult/ambitious task to completion would certainly qualify you for a check plus, but here are some other ideas:
 
 -   Do some longitudinal analyses by pairing data from [previous years](https://www.scq.ubc.ca/so-much-candy-data-seriously/) (2016, 2015, and 2014) with the 2017 data set.
+-   Mine some of the free text fields for data using regular expressions.
 
 ### A Word of Warning
 

@@ -1,6 +1,8 @@
 ---
 title: "Lab 3: `dplyr`"
-format: gfm
+format:
+  gfm:
+    toc: true
 ---
 
 ```{r}

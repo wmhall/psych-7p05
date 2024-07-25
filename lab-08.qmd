@@ -1,6 +1,8 @@
 ---
 title: "Lab 8: Factors"
-format: gfm
+format:
+  gfm:
+    toc: true
 ---
 
 ```{r}

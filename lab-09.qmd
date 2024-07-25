@@ -1,6 +1,8 @@
 ---
 title: "Lab 9: Data in/out"
-format: gfm
+format:
+  gfm:
+    toc: true
 ---
 
 ```{r}

@@ -1,6 +1,15 @@
 # Lab 5: `Tidyr` and Joins
 
 
+- [`tidyr`’s pivot functions](#tidyrs-pivot-functions)
+  - [`relig_income` data](#relig_income-data)
+  - [`us_rent_income` dateset](#us_rent_income-dateset)
+- [Relational data](#relational-data)
+  - [The data](#the-data)
+  - [Mutating joins](#mutating-joins)
+  - [Filtering joins](#filtering-joins)
+- [But I want to do more!](#but-i-want-to-do-more)
+
 ## `tidyr`’s pivot functions
 
 ### `relig_income` data

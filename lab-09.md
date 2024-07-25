@@ -1,6 +1,11 @@
 # Lab 9: Data in/out
 
 
+- [`readr`](#readr)
+- [`readxl`](#readxl)
+- [`haven`](#haven)
+- [But I want to do more!](#but-i-want-to-do-more)
+
 ### `readr`
 
 We’ve been loading the Gapminder data as a data frame from the

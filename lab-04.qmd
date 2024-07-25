@@ -1,6 +1,8 @@
 ---
 title: "Lab 4: `ggplot2`"
-format: gfm
+format:
+  gfm:
+    toc: true
 ---
 
 ```{r}

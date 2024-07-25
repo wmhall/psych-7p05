@@ -1,6 +1,14 @@
 # Lab 7: Strings
 
 
+- [Overview](#overview)
+- [`stringr`](#stringr)
+  - [String splitting by delimiter](#string-splitting-by-delimiter)
+  - [Collapse a vector](#collapse-a-vector)
+  - [Create a character vector by catenating multiple
+    vectors](#catenate-vectors)
+- [I want to do more!](#i-want-to-do-more)
+
 ## Overview
 
 This lab will show you a few functions from `stringr` that we didn’t

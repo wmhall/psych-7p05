@@ -1,6 +1,8 @@
 ---
 title: "Lab 10: Statistical Models"
-format: gfm
+format:
+  gfm:
+    toc: true
 ---
 
 ```{r}

@@ -1,6 +1,18 @@
 # Lab 4: `ggplot2`
 
 
+- [Penguins](#penguins)
+  - [The philosophy of `ggplot2`](#the-philosophy-of-ggplot2)
+- [Scatterplots](#scatterplots)
+  - [Your first plot](#your-first-plot)
+  - [Adding more elements](#adding-more-elements)
+- [Strip plots](#strip-plots)
+- [Bar charts](#bar-charts)
+- [Exploring distributions](#exploring-distributions)
+- [I want to do more!](#i-want-to-do-more)
+  - [Colour](#colour)
+  - [Extensions](#extensions)
+
 ## Penguins
 
 It’s time to explore a new dataset! We’re going to use the [Palmer

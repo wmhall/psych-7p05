@@ -1,6 +1,8 @@
 ---
 title: "Lab 2: Quarto"
-format: gfm
+format:
+  gfm:
+    toc: true
 ---
 
 ```{r}

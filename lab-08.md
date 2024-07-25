@@ -1,6 +1,11 @@
 # Lab 8: Factors
 
 
+- [Overview](#overview)
+- [`forcats`](#forcats)
+  - [`fct_lump()`](#fct_lump)
+- [I want to do more!](#i-want-to-do-more)
+
 ## Overview
 
 This lab will show you a few functions from `forcats` that we didn’t

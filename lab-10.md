@@ -1,6 +1,12 @@
 # Lab 10: Statistical Models
 
 
+- [Fit a linear model](#fit-a-linear-model)
+- [Fit models to subsets of the
+  data](#fit-models-to-subsets-of-the-data)
+- [Explore the models](#explore-the-models)
+- [I want to do more!](#i-want-to-do-more)
+
 ### Fit a linear model
 
 Using the `gapminder` dataset, fit a linear model (`lm`) in which you

@@ -1,6 +1,19 @@
 # Lab 2: Quarto
 
 
+- [Overview](#overview)
+- [Making your first Quarto
+  document](#making-your-first-quarto-document)
+  - [Step 1: Get ready to work](#step-1-get-ready-to-work)
+  - [Step 2: Practice with RStudio’s boilerplate Quarto
+    document](#step-2-practice-with-rstudios-boilerplate-quarto-document)
+  - [Step 3: Swap out the “guts” of the
+    document](#step-3-swap-out-the-guts-of-the-document)
+  - [Step 4: Develop your report](#step-4-develop-your-report)
+- [Create a bio page](#create-a-bio-page)
+- [But I want to do more!](#but-i-want-to-do-more)
+- [Tips and tricks](#tips-and-tricks)
+
 ## Overview
 
 In this lab, you will author a Quarto document and render it to HTML.

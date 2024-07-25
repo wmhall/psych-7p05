@@ -1,6 +1,24 @@
 # Lab 3: `dplyr`
 
 
+- [Before you start](#before-you-start)
+- [Intro](#intro)
+- [Use `filter()` to subset data
+  row-wise.](#use-filter-to-subset-data-row-wise)
+- [Meet the new pipe operator](#meet-the-new-pipe-operator)
+- [Use `select()` to subset the data on variables or
+  columns.](#use-select-to-subset-the-data-on-variables-or-columns)
+- [Revel in the convenience](#revel-in-the-convenience)
+- [Pause to reflect](#pause-to-reflect)
+- [Use `mutate()` to add new
+  variables](#use-mutate-to-add-new-variables)
+- [Use `arrange()` to row-order data in a principled
+  way](#use-arrange-to-row-order-data-in-a-principled-way)
+- [Use `rename()` to rename variables](#use-rename-to-rename-variables)
+- [`group_by()` is a mighty weapon](#group_by-is-a-mighty-weapon)
+- [But I want to do more!](#but-i-want-to-do-more)
+- [Resources](#resources)
+
 ### Before you start
 
 If you haven’t worked through [lab 1](lab-01.md) and [lab 2](lab-02.md),

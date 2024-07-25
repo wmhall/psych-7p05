@@ -136,7 +136,7 @@ fruit_df <- tibble(
   fruit2 = fruit[5:8]
 )
 
-fruit_df %>% 
+fruit_df |>  
   unite("flavor_combo", fruit1, fruit2, sep = " & ")
 ```
 

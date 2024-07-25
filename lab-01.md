@@ -1,6 +1,22 @@
 # Lab 1: Getting started with R
 
 
+- [Let’s get started!](#lets-get-started)
+  - [Loving Projects](#loving-projects)
+  - [Writing a script](#writing-a-script)
+- [Get the Gapminder data](#get-the-gapminder-data)
+- [Data frames are awesome](#data-frames-are-awesome)
+  - [Meet the `gapminder` data frame or
+    “tibble”](#meet-the-gapminder-data-frame-or-tibble)
+  - [Look at the variables inside a data
+    frame](#look-at-the-variables-inside-a-data-frame)
+- [Good practices](#good-practices)
+  - [Comment your code!](#comment-your-code)
+  - [Restarting R!](#restarting-r)
+  - [Use shortcuts!](#use-shortcuts)
+- [But I want to do more!](#but-i-want-to-do-more)
+- [Summary](#summary)
+
 # Let’s get started!
 
 Launch RStudio/R.

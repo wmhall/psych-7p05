@@ -71,13 +71,15 @@ make_table <- function(data) {
 			)
 }
 
-gts$gt_table[[1]]
 
 gts <- 
 assigned_revs |> 
 	mutate(gt_table = map(table, ~make_table(.)))
 
-glue::glue("working/peer-review-assignments/{gts$hw_n}.html") |> 
+fnames <- paste0("Peer Review ", 1:5)
+
+
+glue::glue("working/peer-review-assignments/{fnames}.html") |> 
 	walk2(.x = gts$gt_table, .y = _, ~gtsave(.x, .y))
 
 # checking review counts --------------------------------------------------

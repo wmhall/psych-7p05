@@ -1,6 +1,8 @@
 ---
 title: 'Lab 1: Getting started with R'
-format: gfm
+format:
+  gfm:
+    toc: true
 ---
 
 ```{r}

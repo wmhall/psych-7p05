@@ -46,12 +46,6 @@ This repo contains the labs and homework for PSYC-7P05.
 
 [Peer review guidelines](peer-evaluation-guidelines.md)
 
-## Final project
-
-[Final project guidelines](final-project.md)
-
-[Final project rubric](final-project-rubric.md)
-
 ## License
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/).

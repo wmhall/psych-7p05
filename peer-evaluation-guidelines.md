@@ -1,6 +1,6 @@
 # Guidelines for peer review of assignments:
 
-As part of this course, you will review and comment on other students' homework assignments. This is a mandatory part of the course, and you will be marked on your peer reviews (10% of overall course mark).
+As part of this course, you will review and comment on other students' homework assignments. This is a mandatory part of the course, and you will be marked on your peer reviews.
 
 Your peer review will be shared with the person you were assigned.
 

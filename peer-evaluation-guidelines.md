@@ -49,7 +49,9 @@ Once you have finished your peer review, create a zip file of your R project fol
 -   [Creating a Zip file on Windows](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-8d28fa72-f2f9-712f-67df-f80cf89fd4e5)
 -   [Creating a Zip file on Mac](https://support.apple.com/en-in/guide/mac-help/mchlp2528/mac#:~:text=On%20your%20Mac%2C%20in%20a,zip%20extension.)
 
-To attach your Zip files to a post on the BrightSpace forums, follow the instructions [here](https://community.d2l.com/brightspace/kb/articles/18063-communicate-with-others-using-discussions#attach-a-file-to-a-discussion-thread). You should post your peer review as a post in response to your classmates' homework.
+To attach your Zip files to a post on the BrightSpace forums, follow the instructions [here](https://community.d2l.com/brightspace/kb/articles/18063-communicate-with-others-using-discussions#attach-a-file-to-a-discussion-thread).
+
+You should post your peer review as a post in response to your classmates' homework.
 
 ## Additional resources:
 

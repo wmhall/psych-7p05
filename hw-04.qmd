@@ -1,6 +1,8 @@
 ---
 title: "Homework 4"
-format: gfm
+format:
+  gfm:
+    toc: true
 ---
 
 ```{r}

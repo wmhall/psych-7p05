@@ -1,6 +1,8 @@
 ---
 title: "Homework 5"
-format: gfm
+format:
+  gfm:
+    toc: true
 ---
 
 ### Overview

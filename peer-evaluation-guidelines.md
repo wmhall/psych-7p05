@@ -28,7 +28,7 @@ Your peer review will be shared with the person you were assigned.
 
 ## Writing and submitting your peer review:
 
-You will find your classmates' homework posted on the BrightSpace discussion forum called Peer Reviews. This is the same place where you posted your homework submission. Note that your classmates' posts will only be visible to you after the homework submission deadline.
+You will find your classmates' homework posted on the BrightSpace discussion forum called Homework Peer Review. This is the same place where you posted your homework submission. Note that your classmates' posts will only be visible to you after the homework submission deadline.
 
 You will only see posts from people within your assigned group. Each group has five people in it. From the four homeworks posted by your group members, *you should pick three to review.*
 

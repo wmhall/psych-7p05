@@ -24,7 +24,7 @@ get_sample <- function() {
 	while (!success) {
 		# do something
 		x <- student_names |> 
-			mutate(peer_rev = map(name, ~assign_reviews(., 15))) |> 
+			mutate(peer_rev = map(name, ~assign_reviews(., 10))) |> 
 			unnest(peer_rev) |> 
 			group_by(name) |> 
 			mutate(n = row_number(), 
@@ -37,7 +37,7 @@ get_sample <- function() {
 			count() |>
 			group_by(peer_rev) |> 
 			count() |> 
-			filter(n != 5)
+			filter(n < 4)
 		# check for success
 		success <- nrow(y) == 0
 	}
@@ -57,14 +57,14 @@ assigned_revs <-
 										 	arrange(name)))
 
 
+
 make_table <- function(data) {
 	data |> 
 		gt() |>
 		cols_label(
 			name = md("**Name**"),
 			peer_1 = md("**Assigned Review 1**"),
-			peer_2 = md("**Assigned Review 2**"),
-			peer_3 = md("**Assigned Review 3**")) |> 
+			peer_2 = md("**Assigned Review 2**")) |> 
 		cols_align(
 			align = c("left"),
 			columns = everything()

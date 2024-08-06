@@ -30,7 +30,7 @@ Your peer review will be shared with the person you were assigned.
 
 You will find your classmates' homework posted on the BrightSpace discussion forum called Homework Peer Review. This is the same place where you posted your homework submission. Note that your classmates' posts will only be visible to you after the homework submission deadline.
 
-For each homework, you have been assigned to review three of your classmates' work. The peer review assignments can be found on BrightSpace.
+For each homework, you have been assigned to review two of your classmates' work. The peer review assignments can be found on BrightSpace.
 
 For each peer review, create an R project (e.g., `peer-review-hw01-01.Rproj`).
 
@@ -44,7 +44,7 @@ Use Quarto to write your peer reviews. Using Quarto will allow you to easily ref
 
 Using the `eval: false` option in Quarto will be helpful. It allows you to paste snippets of code into your peer review without worrying about whether they work as standalone pieces of code.
 
-Once you have finished your peer review, create a zip file of your R project folders. Create one zip file for each peer review. This means you should have three zip files to upload. The zip file is what you will upload to the BrightSpace forums. See these instructions for how to create a zip file:
+Once you have finished your peer review, create a zip file of your R project folders. Create one zip file for each peer review. This means you should have two zip files to upload. The zip file is what you will upload to the BrightSpace forums. See these instructions for how to create a zip file:
 
 -   [Creating a Zip file on Windows](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-8d28fa72-f2f9-712f-67df-f80cf89fd4e5)
 -   [Creating a Zip file on Mac](https://support.apple.com/en-in/guide/mac-help/mchlp2528/mac#:~:text=On%20your%20Mac%2C%20in%20a,zip%20extension.)

@@ -78,12 +78,10 @@ assigned_revs |>
 
 fnames <- paste0("Peer Review ", 1:5)
 
-
 glue::glue("working/peer-review-assignments/{fnames}.html") |> 
 	walk2(.x = gts$gt_table, .y = _, ~gtsave(.x, .y))
 
 # checking review counts --------------------------------------------------
-
 
 gts |> 
 	select(hw_n, data) |> 

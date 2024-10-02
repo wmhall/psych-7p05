@@ -94,4 +94,6 @@ gts |>
 	filter(n != 5)
 
 
+student_names |> 
+	arrange(name)
 

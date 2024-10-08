@@ -21,7 +21,7 @@ this lab.
 
 ![](logo.png)
 
-This data comes from the `palmerpenugins` package, which you can install
+This data comes from the `palmerpenguins` package, which you can install
 from CRAN.
 
 ``` r

@@ -17,7 +17,7 @@ It's time to explore a new dataset! We're going to use the [Palmer Penguins](htt
 
 ![](logo.png)
 
-This data comes from the `palmerpenugins` package, which you can install from CRAN.
+This data comes from the `palmerpenguins` package, which you can install from CRAN.
 
 ```{r}
 #| eval: false
